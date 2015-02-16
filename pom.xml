@@ -52,7 +52,7 @@
 		<configuration>
 			<url>http://localhost:8082/manager/text</url>
 			<server>TomcatServer</server>
-			<path>/recberWebApp</path>
+			<path>/test</path>
 		</configuration>
 	</plugin>            
             <plugin>
