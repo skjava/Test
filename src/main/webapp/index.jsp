@@ -1,4 +1,10 @@
+<%-- 
+    Document   : 1
+    Created on : 17.02.2015, 21:45:06
+    Author     : recber
+--%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <html>
 <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
