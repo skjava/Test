@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+    <distributable/>
+
+     <distributable/>
+
+    <!-- Если в течении 30 минут не приходят запросы, ассоциированные с этой сессией, -->
+    <!-- то сервер ее удаляет (предварительно вызвав методы SessionListener) -->
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
+
+    <!-- В случае, если пользователь не ввел никакого URL внутри сайта, а просто корневой '/' -->
+    <!-- в нашем случае http://localhost:8080/quiz, то сервер перенаправляет запрос на index.jsp -->
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+</web-app>
