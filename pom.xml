@@ -19,25 +19,18 @@
             <groupId>javax</groupId>
             <artifactId>javaee-web-api</artifactId>
             <version>7.0</version>
-            <scope>provided</scope>
         </dependency>
             <!-- Servlet API -->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
             <version>3.1.0</version>
-            <!-- scope=provided значит, что зависимость будет добавлена
-            И в classpath компилятору,
-            И в JVM при запуске тестов,
-            НО не в /lib при окончательном формировании артефакта-->
-            <scope>provided</scope>
         </dependency>
         <!--мое-->
        <dependency>
         <groupId>javax.servlet.jsp</groupId>
         <artifactId>jsp-api</artifactId>
         <version>2.2</version>
-        <scope>provided</scope>
     </dependency>
 
     <dependency>
@@ -50,12 +43,7 @@
             <groupId>javax.servlet</groupId>
             <artifactId>jstl</artifactId>
             <version>1.2</version>
-            <!-- scope=compile значит, что зависимость будет добавлена
-            И в classpath компилятору,
-            И в JVM при запуске тестов,
-            И в /lib при окончательном формировании артефакта-->
-            <scope>provided</scope>
-        </dependency>
+         </dependency>
     </dependencies>
 
     <build>
