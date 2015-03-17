@@ -8,6 +8,7 @@ package ua.recber.test;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Enumeration;
+import java.util.Map;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -136,12 +137,15 @@ public class Action extends HttpServlet {
             throws ServletException, IOException {
           //display the parameter names and values
         Enumeration paramNames = request.getParameterNames();
+////        Map paramNames = request.getParameterMap();
+////        paramNames.put(this, request);
 
         String parName;//this will hold the name of the parameter
 
         boolean emptyEnum = false;
 
         if (!paramNames.hasMoreElements()) {
+////        if (!paramNames.isEmpty()) {            
             emptyEnum = true;
         }
 
@@ -157,8 +161,10 @@ public class Action extends HttpServlet {
         }
 
         while (paramNames.hasMoreElements()) {
+////        while (paramNames.isEmpty()) {            
 
             parName = (String) paramNames.nextElement();
+////            parName = (String) paramNames.getOrDefault(out, emptyEnum);
 
             out.println(
                     "<strong>" + parName + "</strong> : "

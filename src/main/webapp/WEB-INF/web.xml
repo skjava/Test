@@ -4,9 +4,25 @@
         <servlet-name>Action</servlet-name>
         <servlet-class>ua.recber.test.Action</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ActionServlet</servlet-name>
+        <servlet-class>ua.recber.servlet.ActionServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ActionServlet2</servlet-name>
+        <servlet-class>ua.recber.servlet.ActionServlet2</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Action</servlet-name>
         <url-pattern>/1.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ActionServlet</servlet-name>
+        <url-pattern>/action.ua</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ActionServlet2</servlet-name>
+        <url-pattern>/action2.ua</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>30</session-timeout>
