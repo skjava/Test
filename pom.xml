@@ -19,14 +19,12 @@
             <groupId>javax</groupId>
             <artifactId>javaee-web-api</artifactId>
             <version>7.0</version>
-            <scope>provided</scope>
         </dependency>
             <!-- Servlet API -->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
             <version>3.1.0</version>
-            <scope>provided</scope>
         </dependency>
         <!--мое-->
        <dependency>
@@ -40,11 +38,12 @@
         <artifactId>standard</artifactId>
         <version>1.1.2</version>
     </dependency>
+        <!--закончилось мое-->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>jstl</artifactId>
             <version>1.2</version>
-        </dependency>
+         </dependency>
     </dependencies>
 
     <build>
@@ -69,7 +68,16 @@
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>
             </plugin>          
-         
+	<plugin>            
+            <groupId>org.apache.tomcat.maven</groupId>
+		<artifactId>tomcat7-maven-plugin</artifactId>
+		<version>2.2</version>
+		<configuration>
+			<url>http://localhost:8082/manager/text</url>
+			<server>TomcatServer</server>
+			<path>/test</path>
+		</configuration>
+	</plugin>            
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
